@@ -48,9 +48,9 @@ let y = s % v; //1
 let r = 34;
 let c = 1;
 let x = r - 32 + c;
-let y = r++ * 4; 
-if(x == 30 || y == 2 ){
- console.log("yeah you got it");
+let y = r++ * 4;
+if (x == 30 || y == 2) {
+    console.log("yeah you got it");
 }
 //Vi har en OR gate i vores if, men ingen af inputsene returner true; derfor executer den ikke.
 
@@ -58,9 +58,9 @@ if(x == 30 || y == 2 ){
 let r = 34;
 let c = 28;
 let x = r - 32 + c;
-let y = r++ * 4; 
-if(x == 30 || y == 2 ){
- console.log("yeah you got it");
+let y = r++ * 4;
+if (x == 30 || y == 2) {
+    console.log("yeah you got it");
 }
 //Her er en løsning
 
@@ -83,24 +83,22 @@ if (inputNum != null) {
 
 //assignment 9
 //write these numbers in the console and write the output. Explain what happens
-    0.1 + 0.2; //0.30000000000000004
-    0.1 + 0.2 === 0.3; //false
-    3  - 1 //2
-    3  + 1 //4
-    '3' - 1 //2
-    '3' + 1 //31
-    '222' - -'111' //333
+0.1 + 0.2; //0.30000000000000004
+0.1 + 0.2 === 0.3; //false
+3 - 1 //2
+3 + 1 //4
+'3' - 1 //2
+'3' + 1 //31
+'222' - -'111' //333
 
 
 //assignemnt 10
 //Write a JavaScript program to determine whether a given year is a leap year 
 // program to check leap year
 const year = prompt("Please enter a year to check");
-if (((year % 4) == 0) && (((year % 100) != 0) || ((year % 400) == 0)))
-{
+if (((year % 4) == 0) && (((year % 100) != 0) || ((year % 400) == 0))) {
     console.log("This is a leap year");
 }
-else
-{
+else {
     console.error("This is not a leap year");
 }
