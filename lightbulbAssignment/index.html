@@ -21,7 +21,7 @@
                 <figcaption class="figLabel">
                     Score
                 </figcaption>
-                <output class="figNum">
+                <output class="figNum" id="scoreNum">
                     0
                 </output>
             </figure>
@@ -39,12 +39,13 @@
         <p id="response">
             Please turn off the light
         </p>
-        <label id="switch">
-            <input type="checkbox" id="togBtn">
-            <div class="slider">
-                <span class="onOff">On</span>
-                <span class="onOff">Off</span>
-            </div>
+        <div class="toggleWrapper">
+            <input class="toggleCheckbox" type="checkbox" checked id="toggle">
+            <label class="slider" for="toggle">
+              <span class="onOff">Off</span>
+              <span class="onOff">On</span>
+            </label>
+          </div>
         </label>
         <div id="bulbDiv">
             <svg xmlns="http://www.w3.org/2000/svg" width="186.966" height="271.957" viewBox="0 0 186.966 271.957">

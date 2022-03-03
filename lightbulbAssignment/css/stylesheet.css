@@ -76,6 +76,7 @@ body
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    margin-top: 15px;
 }
 
 #bulbDiv
@@ -84,15 +85,18 @@ body
     background-color: #EEF4FF;
     border: 1px solid #5CBCF7;
     border-radius: 20px;
+    margin-top: 25px;
 }
 
-#switch
+.toggleWrapper
 {
+    position: relative;
     width: 275px;
     height: 40px;
+    margin-top: 50px;
 }
-  
-#switch input
+
+.toggleCheckbox
 {
     display:none;
 }
@@ -100,6 +104,9 @@ body
 /* The switch button "rail" */
 .slider
 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     position: absolute;
     top: 0;
     left: 0;
@@ -108,40 +115,31 @@ body
     background-color: #EEF4FF;
     border: 1px solid #5CBCF7;
     border-radius: 20px;
-    -webkit-transition: .4s;
-    transition: .4s;
 }
 
 /* The switch button itself */
-.slider:before
+.slider::before
 {
     position: absolute;
     content: "";
     height: 34px;
     width: 134px;
-    left: 4px;
-    bottom: 4px;
+    right: 1px;
+    bottom: 1px;
     background-color: #5CBCF7;
     border: 1px solid #5CBCF7;
     border-radius: 20px;
-    -webkit-transition: .4s;
-    transition: .4s;
+    transition: 0.4s ease-in-out;
 }
 
-input:checked + .slider:before
+.toggleCheckbox:not(:checked) + .slider::before
 {
-    -webkit-transform: translateX(55px);
-    -ms-transform: translateX(55px);
-    transform: translateX(55px);
+    transform: translateX(-135px);
 }
   
 .onOff
 {
     color: #001120;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
     font-size: 16px;
-    z-index: 2;
+    z-index: 9999;
 }
